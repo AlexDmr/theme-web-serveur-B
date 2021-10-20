@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="http://localhost:8080/noCORS/style1.css"  crossorigin="anonymous" />
+<script src="http://localhost:8080/noCORS/script1.js" crossorigin="anonymous"></script>
+
+<h1>Mon site B</h1>
+<p>
+  Une image venant du site B, sans CORS :
+  <img src="http://localhost:8080/noCORS/tete.svg" />
+</p>
+
+<p>
+  Une image venant du site B, avec CORS :
+  <img src="http://localhost:8080/withCORS/tete.svg" />
+</p>
+
+<hr/>
+<p>
+  Fetch d'une image sans CORS : <button id="btNon">GET</button>
+</p>
+<p>
+  Fetch d'une image sans CORS : <button id="btOui">GET</button>
+</p>
