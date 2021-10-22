@@ -1,21 +1,49 @@
-<link rel="stylesheet" href="http://localhost:8080/noCORS/style1.css"  crossorigin="anonymous" />
-<script src="http://localhost:8080/noCORS/script1.js" crossorigin="anonymous"></script>
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://localhost:8443/noCORS/style1.css"  crossorigin="anonymous" />
+    <script src="https://localhost:8443/noCORS/script1.js" crossorigin="anonymous"></script>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <h1>Mon site B</h1>
+    <p>
+      Une image via HTTPS venant d'un serveur A, sans CORS :
+      <img src="https://localhost:8443/noCORS/tete.svg" />
+    </p>
+    
+    <p>
+      Une image via HTTPS venant du serveur A, avec CORS :
+      <img src="https://localhost:8443/withCORS/tete.svg" />
+    </p>
+    
+    <p>
+      Une image via HTTP venant du serveur A, avec CORS :
+      <img src="http://localhost:8080/withCORS/tete.svg" />
+    </p>
+    
+    <p>
+      Une image venant de
+      <a href="https://cdn.pixabay.com/photo/2021/07/17/18/59/waterfall-6473754_1280.jpg" target="_blank">
+        https://cdn.pixabay.com/photo/2021/07/17/18/59/waterfall-6473754_1280.jpg
+      </a>
+      <img style="width: 320px" src="https://cdn.pixabay.com/photo/2021/07/17/18/59/waterfall-6473754_1280.jpg :" />
+    </p>
+    
 
-<h1>Mon site B</h1>
-<p>
-  Une image venant du site B, sans CORS :
-  <img src="http://localhost:8080/noCORS/tete.svg" />
-</p>
+    <hr/>
+    <p>
+      Fetch d'une image via HTTP sans CORS : <button>GET</button>
+    </p>
+    <p>
+      Fetch d'une image via HTTP avec CORS : <button>GET</button>
+    </p>
+    <p>
+      Fetch d'une image via HTTPS sans CORS : <button>GET</button>
+    </p>
+    <p>
+      Fetch d'une image via HTTPS avec CORS : <button>GET</button>
+    </p>
+  </body>
+</html>
 
-<p>
-  Une image venant du site B, avec CORS :
-  <img src="http://localhost:8080/withCORS/tete.svg" />
-</p>
-
-<hr/>
-<p>
-  Fetch d'une image sans CORS : <button id="btNon">GET</button>
-</p>
-<p>
-  Fetch d'une image sans CORS : <button id="btOui">GET</button>
-</p>

@@ -3,9 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "npm run compile && node server.js",
+    "compile": "node ./node_modules/typescript/bin/tsc --target es2020 ./client/index.ts"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-csp-header": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4"
   }
 }
