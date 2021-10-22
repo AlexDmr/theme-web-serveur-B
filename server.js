@@ -9,12 +9,26 @@ const { expressCspHeader, INLINE, NONE, SELF } = require('express-csp-header');
 app.use(express.urlencoded({ extended: true }));
 app.use( expressCspHeader({
     directives: {
-        'default-src': [SELF],
-        'script-src': [SELF, INLINE, 'https://localhost:8443'],
+        'default-src': [SELF, '*'],
+        'script-src': [
+            SELF, INLINE,
+            'https://localhost:8443',
+            'https://www.gstatic.com',
+            'https://apis.google.com'
+        ],
         'style-src': [SELF, 'mystyles.net', 'https://localhost:8443'],
-        'img-src': ['data:', 'https://localhost:8443'],
+        'img-src': [
+            'data:',
+            'https://localhost:8443',
+            'https://lh3.googleusercontent.com'
+        ],
         'worker-src': [NONE],
-        'connect-src': [SELF, 'https://localhost:8443', 'http://localhost:8080']
+        'connect-src': [
+            SELF,
+            'https://localhost:8443',
+            'http://localhost:8080',
+            'https://identitytoolkit.googleapis.com'
+        ]
         // 'block-all-mixed-content': true
 }} ) );
 app.use(express.static('client'));
