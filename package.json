@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "start": "npm run compile && node server.js",
+    "start": "npm run compile && npm run serve",
+    "serve": "node server.js",
     "compile": "node ./node_modules/typescript/bin/tsc"
   },
   "dependencies": {
