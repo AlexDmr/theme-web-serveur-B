@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run compile && node server.js",
-    "compile": "node ./node_modules/typescript/bin/tsc --target es2020 ./client/index.ts"
+    "start": "npm run compile && npm run serve",
+    "serve": "node server.js",
+    "compile": "node ./node_modules/typescript/bin/tsc"
   },
   "dependencies": {
     "express": "^4.17.1",
