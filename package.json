@@ -1,6 +1,6 @@
 {
-  "name": "cors-serveur-alpha",
-  "version": "0.0.0",
+  "name": "cors-serveur-b",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "npm run compile && node server.js",
